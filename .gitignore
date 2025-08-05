@@ -29,3 +29,4 @@ coverage
 
 *.tsbuildinfo
 src/assets/images/VSCodeUserSetup-x64-1.99.0.exe
+.vscode/*
