@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainPage from '@/views/MainPage.vue'
 import BrandList from '@/components/BrandList.vue'
-//import StoreMain from '@/components/shop/StoreMain.vue'
+import StoreMain from '@/components/shop/StoreMain.vue'
 import Profile from '@/components/Profile/Profile.vue'
 import LoginForm from '@/components/login/LoginForm.vue'
 import NotFound from '@/components/404.vue'
@@ -23,7 +23,7 @@ const routes = [
   {
     path: '/store/:id',
     name: 'store',
-    //component: StoreMain,
+    component: StoreMain,
     props: true,
     beforeEnter: async (to: any, from: any, next: any) => {
       try {

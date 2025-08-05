@@ -5,7 +5,7 @@ const StoreBackendUrl = 'http://127.0.0.1:8000'
 
 export const PagesStatus = defineStore('page-status', () => {
   const isCartLoading = ref(true)
-  const selectedProduct = ref<StoreProduct | null>(null) // Типизируем как StoreProduct | null
+  const selectedProduct = ref<StoreProduct['results'][0] | null>(null) // Типизируем как отдельный продукт
   const isProfileSidebarOpen = ref<Boolean | undefined>(false)
 
   const toggleSidebar = (): void => {
@@ -16,7 +16,7 @@ export const PagesStatus = defineStore('page-status', () => {
     isCartLoading.value = status
   }
 
-  function setSelectedProduct(product: StoreProduct | null) {
+  function setSelectedProduct(product: StoreProduct['results'][0] | null) {
     selectedProduct.value = product
   }
 
